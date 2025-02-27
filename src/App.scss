@@ -1,0 +1,114 @@
+.container {
+
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.langBtn {
+    border: none;
+    padding: 10px;
+    background-color: #4e4e4e;
+    border-radius: 10px;
+    color: white;
+
+    &:hover {
+        background-color: #2e2e2e;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.submitBtn {
+    border: none;
+    background-color: #0051ff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #093188;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.user-card {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    gap: 5px;
+
+    &:hover {
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+
+    button:nth-child(1) {
+        background-color: #0347c5;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: #0051ff;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            color: black;
+        }
+    }
+
+    button:nth-child(2) {
+        background-color: red;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: #ff0000;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            color: black;
+        }
+    }
+}
