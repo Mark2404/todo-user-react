@@ -1,0 +1,39 @@
+.masculine-header {
+    background: #222; // Dark, strong background
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    nav {
+        display: flex;
+        gap: 20px;
+
+        a {
+            color: #ddd;
+            font-size: 18px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+            background: rgba(50, 50, 50, 0.5);
+            border: 2px solid transparent;
+
+            &:hover {
+                transform: scale(1.1);
+                border-color: #ff4500; // Strong contrast
+                color: #ff4500;
+            }
+
+            &.active {
+                background: #ff4500;
+                color: #fff;
+                font-weight: bold;
+                box-shadow: 0 4px 8px rgba(255, 69, 0, 0.5);
+            }
+        }
+    }
+}
