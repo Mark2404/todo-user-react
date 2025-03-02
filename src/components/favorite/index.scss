@@ -1,0 +1,113 @@
+.favorites-container {
+    padding: 1.5rem;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorites-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.empty-favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+
+    svg {
+        font-size: 4rem;
+        color: #adb5bd;
+        margin-bottom: 1rem;
+        animation: bounce 1.5s infinite;
+    }
+}
+
+.favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.favorite-item {
+
+    align-items: center;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 130px;
+
+}
+
+.favorite-item-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.favorite-item-name {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.favorite-item-price {
+    font-size: 1rem;
+    color: #555;
+}
+
+.favorite-remove-button {
+    background: rgb(36, 35, 35);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: none;
+
+    &:hover {
+        background: darken(rgb(53, 48, 48), 10%);
+    }
+}
+
+.empty-favorites::before {
+    display: none;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

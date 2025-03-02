@@ -1,88 +1,159 @@
-.home-container {
-    text-align: center;
-    padding: 20px;
-}
+// Контейнер страницы
+.p-6 {
+    padding: 1.5rem;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
 
-.home-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.product-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    flex-direction: column;
 }
 
-.product-card {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    max-width: 1200px;
+
+    padding: 1rem;
+}
+
+
+.card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    width: 200px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-.product-icon {
-    color: #3498db;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    font-weight: bold;
-    color: #2ecc71;
-}
-
-.buy-button {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-
-    &:hover {
-        background: #c0392b;
-    }
-}
-
-.no-products-container {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-}
-
-.no-products-icon {
-    color: #95a5a6;
-}
-
-.no-products-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #7f8c8d;
-    margin-top: 10px;
-}
-
-.add-product-btn {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s ease;
+    border: 1px solid #ddd;
+    width: auto;
 
     &:hover {
-        background: #2980b9;
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        color: #6c757d;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: auto;
+    }
+}
+
+// Кнопки
+button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &.bg-green-500 {
+        background: #28a745;
+        color: #fff;
+
+        &:hover {
+            background: darken(#28a745, 10%);
+        }
+    }
+
+    &.bg-red-500 {
+        background: #dc3545;
+        color: #fff;
+
+        &:hover {
+            background: darken(#dc3545, 10%);
+        }
+    }
+}
+
+// Пустая корзина и избранное
+.text-gray-500 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #adb5bd;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.empty-favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #dc3545;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+    &::before {
+        content: "❤️";
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+// Креативный UI для пустого списка товаров
+.empty-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+
+    svg {
+        font-size: 4rem;
+        color: #adb5bd;
+        margin-bottom: 1rem;
+        animation: bounce 1.5s infinite;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
