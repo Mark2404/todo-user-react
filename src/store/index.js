@@ -67,6 +67,7 @@ const useStore = create((set) => ({
         localStorage.setItem("cart", JSON.stringify(updatedCart));
         return { cart: updatedCart };
     }),
+
 }));
 
 export default useStore;

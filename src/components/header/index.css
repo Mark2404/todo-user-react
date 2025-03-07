@@ -1,0 +1,35 @@
+.masculine-header {
+  background: #222;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.masculine-header nav {
+  display: flex;
+  gap: 20px;
+}
+.masculine-header nav a {
+  color: #ddd;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  background: rgba(50, 50, 50, 0.5);
+  border: 2px solid transparent;
+}
+.masculine-header nav a:hover {
+  transform: scale(1.1);
+  border-color: #ff4500;
+  color: #ff4500;
+}
+.masculine-header nav a.active {
+  background: #ff4500;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(255, 69, 0, 0.5);
+}/*# sourceMappingURL=index.css.map */
