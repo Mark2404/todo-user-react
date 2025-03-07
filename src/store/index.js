@@ -32,8 +32,8 @@ const useStore = create((set) => ({
         const isFavorite = state.favorites.some((item) => item.id === product.id);
         return {
             favorites: isFavorite
-                ? state.favorites.filter((item) => item.id !== product.id) // Удалить
-                : [...state.favorites, product], // Добавить
+                ? state.favorites.filter((item) => item.id !== product.id)
+                : [...state.favorites, product],
         };
     }),
 

@@ -1,0 +1,90 @@
+.product-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .product-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .buy-btn {
+        background: #22c55e;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: #16a34a;
+        }
+    }
+
+    .fav-btn {
+        background: #a3a3a3;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.active {
+            background: #ec4899;
+        }
+    }
+}
+
+// Стили для пагинации
+.ant-pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

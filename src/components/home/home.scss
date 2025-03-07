@@ -1,4 +1,3 @@
-// Контейнер страницы
 .p-6 {
     padding: 1.5rem;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
@@ -58,7 +57,7 @@
     }
 }
 
-// Кнопки
+
 button {
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -88,7 +87,7 @@ button {
     }
 }
 
-// Пустая корзина и избранное
+
 .text-gray-500 {
     text-align: center;
     font-size: 1.5rem;
@@ -115,7 +114,7 @@ button {
     }
 }
 
-// Креативный UI для пустого списка товаров
+
 .empty-products {
     display: flex;
     flex-direction: column;

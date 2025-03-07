@@ -17,6 +17,9 @@ const Header = () => {
                 <NavLink to="/favorite" activeClassName="active">
                     <FaHeart /> Favorite
                 </NavLink>
+                <NavLink to="/reactquery" activeClassName="active">
+                    <FaHome /> React Query Products
+                </NavLink>
                 {isAuthenticated && <NavLink to="/addProduct">Add Product</NavLink>}
                 {isAuthenticated ? <NavLink to="/profile">Profile</NavLink> : <NavLink to="/login">Login</NavLink>}
             </nav>

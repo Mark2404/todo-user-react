@@ -2,9 +2,31 @@ import React from "react";
 import useStore from "../../store/index";
 import { FaBoxOpen } from "react-icons/fa";
 import "./home.scss";
+import { useMemo } from 'react';
+
+import { notification } from 'antd';
+
+const Context = React.createContext({ name: 'Default' });
 
 export default function HomePage() {
     const { products, addToCart, toggleFavorite, favorites } = useStore();
+    const [api, contextHolder] = notification.useNotification();
+
+    const openNotification = (placement) => {
+        api.info({
+            message: `Notification ${placement}`,
+            description: <Context.Consumer>{({ name }) => `Hello, ${name}!`}</Context.Consumer>,
+            placement,
+        });
+    };
+
+    const contextValue = useMemo(() => ({ name: 'Ant Design' }), []);
+
+
+    const handleClick = (product) => {
+        toggleFavorite(product);
+        openNotification('topRight');
+    };
 
     return (
         <div className="p-6">
@@ -30,11 +52,16 @@ export default function HomePage() {
                                         Купить
                                     </button>
                                     <button
-                                        onClick={() => toggleFavorite(product)}
+                                        onClick={() => {
+                                            toggleFavorite(product);
+                                        }}
+
+
                                         className={isFavorite ? "bg-pink-500" : "bg-gray-500"}
                                     >
                                         {isFavorite ? "💖" : "💕"}
                                     </button>
+
                                 </div>
                             </div>
                         );

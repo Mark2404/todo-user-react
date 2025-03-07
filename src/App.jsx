@@ -8,6 +8,8 @@ import Favorite from './components/favorite';
 import AddProduct from "./components/addProduct";
 import Login from "./components/login";
 import Profile from "./components/profile";
+import RectProducts from './components/rectProducts';
+
 
 const PrivateRoute = ({ element }) => {
   const { isAuthenticated } = useAuthStore();
@@ -21,6 +23,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path='/reactquery' element={<RectProducts />} />
         <Route path="/profile" element={<PrivateRoute element={<Profile />} />} />
         <Route path="*" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
